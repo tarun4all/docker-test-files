@@ -1,0 +1,25 @@
+{
+  "name": "first-coker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarun4all/docker-test-files.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarun4all/docker-test-files/issues"
+  },
+  "homepage": "https://github.com/tarun4all/docker-test-files#readme",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.10",
+    "vhost": "^3.0.2"
+  }
+}
