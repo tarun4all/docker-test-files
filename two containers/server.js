@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const mongoose = require("mongoose");
+require('dotenv').config();
 
+console.log('Env variables are there: ..', process.env.MONGO_PONGO);
 mongoose.connect('mongodb://mongo:27017/newdock', () => {
     console.log("Connected to the DB");
 }, (err) => {

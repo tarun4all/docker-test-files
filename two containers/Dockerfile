@@ -6,6 +6,7 @@ RUN apt-get update
 RUN yes | apt install nodejs
 RUN yes | apt install npm
 RUN yes | apt-get install groovy
+RUN yes | apt-get install libreoffice-core
 RUN npm install
 COPY . /app
 RUN groovy groovyTest.groovy
