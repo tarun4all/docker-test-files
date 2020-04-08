@@ -1,20 +1,19 @@
 const express = require('express');
 const app = express();
-const User = require('./mongoConfig');
+const {readFileSync, writeFileSync} = require('fs');
 
-app.use(express.static("public"));
+const d = require('./dir/test.json');
+console.log(d);
 
-app.get('/', (req, res) => {
-  console.log('Route called');
-  res.send('Hello world');
-});
+// writeFileSync(`./dir/test.json`, JSON.stringify({name: 'tarun'}), 'utf8');
 
-app.get('/fetchData', async (req, res) => {
-  await User.find({}, (err, doc) => {
-    if(err) {console.log(err); res.send(err);}
-    if(doc) res.json(doc);
-  });
+// app.use(express.static("public"));
+
+app.get('/test', (req, res) => {
+  const data = require('./dir/test.json');
+  console.log('Route called', data);
+  res.send('Hello world', data.name);
 });
 
 //server port listen
-app.listen(8081, () => console.log('Server starts'));
+app.listen(3000, () => console.log('Server starts'));
